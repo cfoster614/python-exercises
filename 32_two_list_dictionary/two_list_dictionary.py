@@ -15,3 +15,19 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+    # import itertools
+    # my_dict = {}
+    # if len(values) >= len(keys):
+    #     for item in zip(keys, values):
+    #         my_dict[item[0]] = item[1]
+    # else:
+    #    for item in itertools.zip_longest(keys, values):
+    #        my_dict[item[0]] = item[1]
+    # return my_dict
+       
+    
+    from itertools import zip_longest
+    return dict(zip_longest(keys, values))
+        
+  
+        
